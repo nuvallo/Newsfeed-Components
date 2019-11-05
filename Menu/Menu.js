@@ -1,12 +1,12 @@
 /* This is the data we will be using, study it but don't change anything, yet. */
 
 let menuItems = [
-  'Students',
-  'Faculty',
+  "Students",
+  "Faculty",
   "What's New",
-  'Tech Trends',
-  'Music',
-  'Log Out'
+  "Tech Trends",
+  "Music",
+  "Log Out"
 ];
 
 /* 
@@ -21,6 +21,7 @@ let menuItems = [
 
   The function takes an array as its only argument.
 
+
   Step 2: Inside this function, iterate over the array creating a list item <li> element for each item in the array. 
   Add those items to the <ul>
 
@@ -33,3 +34,25 @@ let menuItems = [
   Step 6: add the menu component to the DOM.
   
 */
+
+function menu() {
+  const header = document.querySelector(".header");
+  const menuDiv = document.createElement("div");
+  const menuList = document.createElement("ul");
+
+  const items = menuItems.forEach(() => {
+    var listItem = document.createElement("li");
+    listItem.textContent = null;
+    menuList.append(listItem);
+  });
+
+  // Tree structure for elements
+  header.append(menuDiv);
+  menuDiv.append(menuList);
+  menuList.append(items);
+
+  // Classes
+  menuDiv.classList.add("menu");
+}
+
+console.log(menu());
