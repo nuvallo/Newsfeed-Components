@@ -40,7 +40,6 @@ function menu() {
   const menuBtn = document.querySelector(".menu-button");
   const menuDiv = document.createElement("div");
   const menuList = document.createElement("ul");
-
   const items = menuItems.forEach(menuIndex => {
     var listItem = document.createElement("li");
     listItem.textContent = menuIndex;
@@ -54,6 +53,15 @@ function menu() {
 
   // Classes
   menuDiv.classList.add("menu");
+
+  // Functionality
+  menuBtn.addEventListener("click", () => {
+    if (menuDiv.classList === "menu--open") {
+      menuDiv.classList.remove("menu--open");
+    } else {
+      menuDiv.classList.add("menu--open");
+    }
+  });
 }
 
-console.log(menu());
+menu();
