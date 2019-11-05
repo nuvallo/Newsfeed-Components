@@ -37,12 +37,13 @@ let menuItems = [
 
 function menu() {
   const header = document.querySelector(".header");
+  const menuBtn = document.querySelector(".menu-button");
   const menuDiv = document.createElement("div");
   const menuList = document.createElement("ul");
 
-  const items = menuItems.forEach(() => {
+  const items = menuItems.forEach(menuIndex => {
     var listItem = document.createElement("li");
-    listItem.textContent = null;
+    listItem.textContent = menuIndex;
     menuList.append(listItem);
   });
 
