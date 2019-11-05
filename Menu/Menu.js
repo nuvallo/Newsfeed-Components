@@ -56,11 +56,7 @@ function menu() {
 
   // Functionality
   menuBtn.addEventListener("click", () => {
-    if (menuDiv.classList === "menu--open") {
-      menuDiv.classList.remove("menu--open");
-    } else {
-      menuDiv.classList.add("menu--open");
-    }
+    menuDiv.classList.toggle("menu--open");
   });
 }
 

@@ -144,6 +144,11 @@ function article(title, publishDate, pOne, pTwo, pThree) {
   paragraphTwo.textContent = pTwo;
   paragraphThree.textContent = pThree;
   span.textContent = "click";
+
+  // Functionality
+  span.addEventListener("click", () => {
+    article.classList.toggle("article-open");
+  });
 }
 
 data.forEach(data => {
